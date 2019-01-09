@@ -1,0 +1,13 @@
+mbta_transit.routes:
+  path: '/mbta'
+  defaults:
+    _controller: '\Drupal\mbta_transit\Controller\MBTAController::bay_state_routes'
+    _title: 'MBTA transit routes and schedules'
+  requirements:
+    _permission: 'access content'
+mbta_transit.schedules:
+  path: '/mbta/schedule/{id}'
+  defaults:
+    _controller: '\Drupal\mbta_transit\Controller\MBTAController::bay_state_schedules'
+  requirements:
+    _permission: 'access content'

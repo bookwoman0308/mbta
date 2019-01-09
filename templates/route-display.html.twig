@@ -1,0 +1,11 @@
+<div class="route">
+{% for index in types %}
+  <strong>{{ index }}</strong>
+  {% for key in route_attributes %}
+    {% if key.type == index %}
+      <p style="background-color:#{{ key.bg_color}};">
+      <a style="color:#{{ key.text_color}};" href="/mbta/schedule/{{ key.route_id}}">{{ key.long_name }}</a></p>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</div>

@@ -1,0 +1,10 @@
+<div class="schedule">
+<h2 style="margin-bottom:10px">Schedule for {{ today_date }}: Route {{ route_id }}</h2>
+{% for key in schedule_attributes %}
+  {% if key.stop_name matches '/^\\d+$/' %}
+    <p>Vehicle {{ key.vehicle_name }} arrives at Stop {{ key.stop_name }} at {{ key.arrival_time }}</p>
+  {% else %}
+    <p>{{ key.vehicle_name }} arrives at {{ key.stop_name }} at {{ key.arrival_time }}</p>
+   {% endif %}
+{% endfor %}
+</div>

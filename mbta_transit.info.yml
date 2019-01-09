@@ -1,0 +1,6 @@
+name: MBTA Transit
+type: module
+description: Output route and schedule information from the MBTA API
+package: custom
+version: 8.x-1.x
+core: 8.x
